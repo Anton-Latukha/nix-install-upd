@@ -1,11 +1,11 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Anton-Latukha <anton.latukha@gmail.com>
 
 # Install dependencies
 RUN apt update && apt -y install git patch curl bzip2
 
-ENV NIX_VER nix-1.11.15
+ENV NIX_VER nix-2.0.2
 ENV NIX_SYSTEM x86_64-linux
 ENV NIX_EXT tar.bz2
 ENV NIX_URL https://nixos.org/releases/nix/"$NIX_VER"/"$NIX_VER"-"$NIX_SYSTEM"."$NIX_EXT"
